@@ -74,6 +74,8 @@ fun Greeting(name: String, modifier: Modifier = Modifier) {
         MyStateHoisting()
         Spacer(Modifier.height(10.dp))
         MyButton()
+        Spacer(Modifier.height(10.dp))
+        MyButtonState()
     }
 
 

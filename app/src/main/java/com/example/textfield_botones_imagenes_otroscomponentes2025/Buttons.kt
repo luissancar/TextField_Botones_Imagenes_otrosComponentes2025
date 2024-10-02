@@ -21,6 +21,7 @@ import androidx.compose.ui.unit.dp
 fun MyButton() {
     Button(
         onClick = {},
+        enabled = false,
         colors = ButtonDefaults.buttonColors(
             containerColor = Color.Red,          // Color de fondo cuando está habilitado
             contentColor = Color.White,           // Color del texto o contenido cuando está habilitado
@@ -33,5 +34,26 @@ fun MyButton() {
             Text("Pulsar")
             Text("Pulsar")
         }
+    }
+}
+
+
+
+@Composable
+fun MyButtonState() {
+    var enable by remember { mutableStateOf(true) }
+    Button(
+        onClick = {enable=false},
+        enabled = enable,
+        colors = ButtonDefaults.buttonColors(
+            containerColor = Color.Red,          // Color de fondo cuando está habilitado
+            contentColor = Color.White,           // Color del texto o contenido cuando está habilitado
+            disabledContainerColor = Color.Gray,  // Color de fondo cuando está deshabilitado
+            disabledContentColor = Color.DarkGray // Color del texto cuando está deshabilitado
+        ),
+        border = BorderStroke(3.dp,Color.Yellow)
+    ) {
+
+            Text("Enabled")
     }
 }
