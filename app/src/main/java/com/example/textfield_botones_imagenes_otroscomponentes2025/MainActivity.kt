@@ -72,6 +72,8 @@ fun Greeting(name: String, modifier: Modifier = Modifier) {
         MyOutLinedTextField()
         Spacer(Modifier.height(10.dp))
         MyStateHoisting()
+        Spacer(Modifier.height(10.dp))
+        MyButton()
     }
 
 
